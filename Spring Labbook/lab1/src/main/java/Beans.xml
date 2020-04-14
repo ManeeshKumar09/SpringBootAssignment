@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:util="http://www.springframework.org/schema/util" 
+    xmlns:context ="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"> 
+        
+        <context:annotation-config/>
+       
+        <bean id ="employee" class="com.capgemini.main.Employee">
+        <property name="employeeId" value="1235"/>
+        <property name="employeeName" value="Maneesh Kumar"/>
+        <property name="salary" value="500000"/>
+        <property name="businessUnit" value="FS-BU"/>
+        <property name="age" value="22"/>
+        </bean>
+        <bean id ="employee2" class="com.capgemini.main.Employee">
+        <property name="employeeId" value="1233"/>
+        <property name="employeeName" value="Princy Pandey"/>
+        <property name="salary" value="70000"/>
+        <property name="businessUnit" value="PES-BU"/>
+        <property name="age" value="22"/>
+        </bean>
+ 		<bean id="sbu" class="com.capgemini.main.SBU" autowire="byName">
+ 		<property name="sbuHead" value="Aishwarya"/>
+ 		<property name="sbuName" value="PDS"/>
+ 		
+ 		</bean> 
+        
+</beans>
